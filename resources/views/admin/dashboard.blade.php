@@ -1,31 +1,29 @@
 @extends('layout.app')
 @section('content')
-    <main id="home" class="home">
-
+    <main id="main" class="main">
         <div class="pagetitle">
             <h1>Dashboard</h1>
             <nav>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                     <li class="breadcrumb-item active">Dashboard</li>
                 </ol>
-            </nav>                  
+            </nav>
         </div>
-
         <section class="section dashboard">
             <div class="row">
-
-               
                 <div class="col-lg-8">
                     <div class="row">
 
-                        
+
                         <div class="col-xxl-4 col-md-6">
                             <div class="card info-card sales-card">
 
                                 <div class="filter">
-                                    <a class="icon" href="/dashboard" data-bs-toggle="dropdown"><i
-                                            class="bi bi-three-dots"></i></a>
+                                    <a class="icon" href="{{ route('home') }}" data-bs-toggle="dropdown">
+                                        <i class="bi bi-three-dots"></i>
+                                    </a>
+
                                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                                         <li class="dropdown-header text-start">
                                             <h6>Filter</h6>
@@ -55,7 +53,7 @@
                                 </div>
 
                             </div>
-                        </div><!-- End Sales Card -->
+                        </div>
 
                         <!-- Revenue Card -->
                         <div class="col-xxl-4 col-md-6">

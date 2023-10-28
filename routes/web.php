@@ -11,7 +11,6 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TablesdataController;
 use App\Http\Controllers\TablesgeneralController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,16 +21,3 @@ use App\Http\Controllers\TablesgeneralController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/dashboard', [DashboardController::class, 'home']);
-
-
-
-Route::get('/', [AppController::class, 'showApp'])->name('show.app');
-Route::get('/footer', [FooterController::class, 'showFooter'])->name('show.Footer');
-Route::get('/header', [HeaderController::class, 'showHeader'])->name('show.Header');
-Route::get('/sidebar', [SidebarController::class, 'showSidebar'])->name('show.Sidebar');
-Route::get('/profile', [ProfileController::class, 'showProfile'])->name('profile');
-Route::get('/settings', [SettingsController::class, 'showSettings'])->name('show.settings');
-Route::get('/tabledata', [TablesdataController::class, 'showTablesdata'])->name('show.tabledata');
-Route::get('/tablesgeneral', [TablesgeneralController::class, 'showTablesgeneral'])->name('show.tablegeneral');
-  
